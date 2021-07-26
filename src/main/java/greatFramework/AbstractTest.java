@@ -30,11 +30,12 @@ public abstract class AbstractTest {
         seleniumJupiter.getConfig().enableScreenshotAtTheEndOfTests();
         seleniumJupiter.getConfig().takeScreenshotAsPng();
         seleniumJupiter.getConfig().setOutputFolder(AppUI.properties().getProperty("screenshotFolder"));
-
+        /*
         chromeOptions = new ChromeOptions();
         if (AppUI.properties().getProperty("headless").toLowerCase().equals("true")) {
             chromeOptions.addArguments("--headless");
         }
+        */
     }
 
 
