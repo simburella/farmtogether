@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+jar {
+    archiveBaseName = 'junit5-selenium'
+    archiveVersion = '1.0.0'
+}
+
+dependencies {
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.2'
+    testImplementation("org.seleniumhq.selenium:htmlunit-driver:2.50.0")
+    implementation(
+            'org.seleniumhq.selenium:selenium-java:3.141.59',
+            'io.github.bonigarcia:webdrivermanager:4.1.0',
+            "io.github.bonigarcia:selenium-jupiter:3.4.0",
+            'org.junit.jupiter:junit-jupiter-api:5.7.2'
+    )
+}
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+}

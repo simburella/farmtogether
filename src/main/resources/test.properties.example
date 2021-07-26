@@ -1,0 +1,5 @@
+baseUrl=https://yourAppURL.com/
+browser=chrome
+login=
+password=
+screenshotFolder=./screenshots
